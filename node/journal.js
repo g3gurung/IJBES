@@ -1,4 +1,3 @@
-<script>
 
 
 var express = require('express');
@@ -448,4 +447,3 @@ app.post('/feedback', function(req, res) {
     }
 });
 
-</script>
