@@ -14,8 +14,8 @@ var db = require("mongojs").connect(databaseUrl, collections);
 var app = express();
 
 var admin = [
-    {id: 1, username: ‘user’, password: ‘pass'}
-    , {id: 2, username: ‘user’, password: ‘pass’}
+    {id: 1, username: 'user', password: 'pass'}
+    , {id: 2, username: 'user', password: 'pass'}
 ];
 
 function findByUsername(username, fn) {
