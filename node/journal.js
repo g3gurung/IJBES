@@ -1,3 +1,4 @@
+<script>
 
 
 var express = require('express');
@@ -59,8 +60,8 @@ var nodemailer = require("nodemailer"),
         transport = nodemailer.createTransport('SMTP', {
             service: "Gmail",
             auth: {
-                user: Òwhatever@gmail.com",
-                pass: ÒwhateverÓ
+                user: "whatever@gmail.com",
+                pass: "whatever"
             }
         });
 
@@ -96,8 +97,8 @@ app.post('/uploadFiles', function(req, res) {
     transport.sendMail({
         from: req.body.uploaderEmail,
         to: "manuscripts@ijbes.com",
-        subject: "Manuscript Submission â†’ "+req.body.uploaderName, // Subject line
-        html: "Submitter Nameâ†’ <b>" + req.body.uploaderName + "</b> <br/> Submitter Emailâ†’ <b>" + req.body.uploaderEmail + "</b>", // html body
+        subject: "Manuscript Submission "+req.body.uploaderName, // Subject line
+        html: "Submitter Name <b>" + req.body.uploaderName + "</b> <br/> Submitter Email <b>" + req.body.uploaderEmail + "</b>", // html body
         attachments: attch
     }, function(error, response) {
         if (error) {
@@ -446,3 +447,5 @@ app.post('/feedback', function(req, res) {
         });
     }
 });
+
+</script>
